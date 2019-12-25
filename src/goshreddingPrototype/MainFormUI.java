@@ -108,6 +108,7 @@ public class MainFormUI extends javax.swing.JFrame {
                         //oeFrm.event = event;
                         oeFrm.sourceForm = 1;
                         oeFrm.setEvent(event);
+                        oeFrm.setDataType(1);
                         oeFrm.setVisible(true);
                         dispose();
                     }
