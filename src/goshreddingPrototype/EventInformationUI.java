@@ -317,7 +317,7 @@ public class EventInformationUI extends javax.swing.JFrame {
         jLabel1.setText("The preferable image");
 
         jLabel3.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel3.setText("size is 350x90");
+        jLabel3.setText("size is 35:9");
 
         imageLbl.setBackground(new java.awt.Color(204, 204, 204));
         imageLbl.setBorder(javax.swing.BorderFactory.createEtchedBorder());

@@ -614,7 +614,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="66" red="66" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="size is 350x90"/>
+            <Property name="text" type="java.lang.String" value="size is 35:9"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="imageLbl">

@@ -55,7 +55,6 @@ public class LoginUI extends javax.swing.JFrame {
         jLabel1.setText("Login");
 
         usernameTxt.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
-        usernameTxt.setText("goofytony");
 
         loginBtn.setBackground(new java.awt.Color(72, 124, 175));
         loginBtn.setText("Log in");
@@ -139,7 +138,7 @@ public class LoginUI extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 482, Short.MAX_VALUE)
+            .addComponent(jPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 482, Short.MAX_VALUE)
         );
 
         pack();

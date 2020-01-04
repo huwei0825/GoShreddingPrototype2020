@@ -5,11 +5,10 @@
  */
 package goshreddingPrototype;
 
-import goshredding.vo.EventVO;
 import goshredding.data.Validation;
 import goshredding.service.GoService;
 import goshredding.vo.OrganizerVO;
-import java.util.ArrayList;
+import goshredding.vo.ParticipantVO;
 import javax.swing.JOptionPane;
 
 /**
@@ -23,17 +22,6 @@ public class editProfileUI extends javax.swing.JFrame {
      */
     public editProfileUI() {
         initComponents();
-        usernameTxt.setText("Goofy tony");
-        forenameTxt.setText("Tony");
-        surnameTxt.setText("Hu");
-        dobTxt.setText("2002-04-05");
-        add1Txt.setText("151 Mumbles Rd");
-        add2Txt.setText("Swansea");
-        postcodeTxt.setText("SA3 4EU");
-        numTxt.setText("07752668726");
-        emailTxt.setText("Tonyhu1503@gmail.com");
-        
-        
     }
 
     /**
@@ -52,27 +40,28 @@ public class editProfileUI extends javax.swing.JFrame {
         add1Txt = new javax.swing.JTextField();
         add2Txt = new javax.swing.JTextField();
         postcodeTxt = new javax.swing.JTextField();
+        password1Txt = new javax.swing.JTextField();
+        password2Txt = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
         numTxt = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         emailTxt = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
+        userTypeComboBox = new javax.swing.JComboBox<>();
+        jLabel14 = new javax.swing.JLabel();
         backBtn = new javax.swing.JButton();
         saveBtn = new javax.swing.JButton();
         dobTxt = new javax.swing.JTextField();
         usernameTxt = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        password1Txt = new javax.swing.JTextField();
-        jLabel14 = new javax.swing.JLabel();
-        password2Txt = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(239, 246, 254));
@@ -81,80 +70,65 @@ public class editProfileUI extends javax.swing.JFrame {
 
         jPanel.setBackground(new java.awt.Color(239, 246, 254));
         jPanel.setPreferredSize(new java.awt.Dimension(850, 480));
-        jPanel.setLayout(null);
 
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
-        jLabel2.setText("Edit information");
-        jPanel.add(jLabel2);
-        jLabel2.setBounds(366, 26, 189, 30);
+        jLabel2.setText("Edit profile");
 
         forenameTxt.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
-        jPanel.add(forenameTxt);
-        forenameTxt.setBounds(167, 82, 289, 35);
 
         surnameTxt.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
-        jPanel.add(surnameTxt);
-        surnameTxt.setBounds(167, 129, 289, 35);
 
         add1Txt.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
-        jPanel.add(add1Txt);
-        add1Txt.setBounds(167, 222, 289, 35);
 
         add2Txt.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
-        jPanel.add(add2Txt);
-        add2Txt.setBounds(167, 269, 289, 35);
 
         postcodeTxt.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
-        jPanel.add(postcodeTxt);
-        postcodeTxt.setBounds(167, 316, 289, 35);
+
+        password1Txt.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
+
+        password2Txt.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
 
         jLabel4.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel4.setText("Surname:");
-        jPanel.add(jLabel4);
-        jLabel4.setBounds(79, 134, 82, 22);
 
         jLabel5.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel5.setText("Forename:");
-        jPanel.add(jLabel5);
-        jLabel5.setBounds(69, 87, 92, 22);
 
         jLabel6.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel6.setText(" Postcode:");
-        jPanel.add(jLabel6);
-        jLabel6.setBounds(71, 321, 90, 22);
 
         jLabel7.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel7.setText("DOB:");
-        jPanel.add(jLabel7);
-        jLabel7.setBounds(118, 181, 43, 22);
+
+        jLabel8.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel8.setText("I'm a:");
 
         jLabel9.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel9.setText("Address2:");
-        jPanel.add(jLabel9);
-        jLabel9.setBounds(75, 274, 86, 22);
 
         jLabel10.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel10.setText("Address1:");
-        jPanel.add(jLabel10);
-        jLabel10.setBounds(75, 227, 86, 22);
+
+        jLabel11.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel11.setText("Password(8 characters):");
 
         numTxt.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
-        jPanel.add(numTxt);
-        numTxt.setBounds(167, 363, 289, 35);
 
         jLabel12.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel12.setText("Contact Num:");
-        jPanel.add(jLabel12);
-        jLabel12.setBounds(41, 368, 120, 22);
 
         emailTxt.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
-        jPanel.add(emailTxt);
-        emailTxt.setBounds(167, 410, 289, 35);
 
         jLabel13.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel13.setText("email:");
-        jPanel.add(jLabel13);
-        jLabel13.setBounds(108, 415, 53, 22);
+
+        userTypeComboBox.setBackground(new java.awt.Color(255, 255, 255));
+        userTypeComboBox.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
+        userTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "participant", "Organizer" }));
+        userTypeComboBox.setPreferredSize(new java.awt.Dimension(96, 40));
+
+        jLabel14.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel14.setText("Confirm password:");
 
         backBtn.setBackground(new java.awt.Color(72, 124, 175));
         backBtn.setText("Back");
@@ -163,8 +137,6 @@ public class editProfileUI extends javax.swing.JFrame {
                 backBtnActionPerformed(evt);
             }
         });
-        jPanel.add(backBtn);
-        backBtn.setBounds(560, 410, 106, 35);
 
         saveBtn.setBackground(new java.awt.Color(72, 124, 175));
         saveBtn.setText("Save");
@@ -173,79 +145,161 @@ public class editProfileUI extends javax.swing.JFrame {
                 saveBtnActionPerformed(evt);
             }
         });
-        jPanel.add(saveBtn);
-        saveBtn.setBounds(710, 410, 106, 35);
 
         dobTxt.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
-        jPanel.add(dobTxt);
-        dobTxt.setBounds(167, 176, 289, 35);
 
         usernameTxt.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
-        jPanel.add(usernameTxt);
-        usernameTxt.setBounds(540, 130, 260, 35);
 
         jLabel15.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel15.setText("Username:");
-        jPanel.add(jLabel15);
-        jLabel15.setBounds(474, 87, 92, 22);
 
-        jPanel1.setBackground(new java.awt.Color(218, 227, 243));
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel1.setText("(dd/mm/yyyy)");
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel1.setText("Change password");
-
-        password1Txt.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
-
-        jLabel14.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel14.setText("Confirm password:");
-
-        password2Txt.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
-
-        jLabel11.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel11.setText("New Password:");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(69, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(password2Txt, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(password1Txt, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel14)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel1)
-                        .addGap(106, 106, 106))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel11)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
+        javax.swing.GroupLayout jPanelLayout = new javax.swing.GroupLayout(jPanel);
+        jPanel.setLayout(jPanelLayout);
+        jPanelLayout.setHorizontalGroup(
+            jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelLayout.createSequentialGroup()
+                .addGap(384, 384, 384)
+                .addComponent(jLabel2))
+            .addGroup(jPanelLayout.createSequentialGroup()
+                .addGap(69, 69, 69)
+                .addComponent(jLabel5)
+                .addGap(6, 6, 6)
+                .addComponent(forenameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel8)
+                .addGap(33, 33, 33)
+                .addComponent(userTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanelLayout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addComponent(jLabel4)
+                .addGap(6, 6, 6)
+                .addComponent(surnameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel15))
+            .addGroup(jPanelLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
                 .addComponent(jLabel1)
-                .addGap(17, 17, 17)
-                .addComponent(jLabel11)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(password1Txt, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel14)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(password2Txt, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addGap(2, 2, 2)
+                .addComponent(jLabel7)
+                .addGap(6, 6, 6)
+                .addComponent(dobTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(102, 102, 102)
+                .addComponent(usernameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanelLayout.createSequentialGroup()
+                .addGap(75, 75, 75)
+                .addComponent(jLabel10)
+                .addGap(6, 6, 6)
+                .addComponent(add1Txt, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel11))
+            .addGroup(jPanelLayout.createSequentialGroup()
+                .addGap(75, 75, 75)
+                .addComponent(jLabel9)
+                .addGap(6, 6, 6)
+                .addComponent(add2Txt, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(102, 102, 102)
+                .addComponent(password1Txt, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanelLayout.createSequentialGroup()
+                .addGap(71, 71, 71)
+                .addComponent(jLabel6)
+                .addGap(6, 6, 6)
+                .addComponent(postcodeTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel14))
+            .addGroup(jPanelLayout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addComponent(jLabel12)
+                .addGap(6, 6, 6)
+                .addComponent(numTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(102, 102, 102)
+                .addComponent(password2Txt, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanelLayout.createSequentialGroup()
+                .addGap(108, 108, 108)
+                .addComponent(jLabel13)
+                .addGap(6, 6, 6)
+                .addComponent(emailTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(102, 102, 102)
+                .addComponent(backBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48)
+                .addComponent(saveBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
-
-        jPanel.add(jPanel1);
-        jPanel1.setBounds(470, 174, 360, 220);
+        jPanelLayout.setVerticalGroup(
+            jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(jLabel2)
+                .addGap(26, 26, 26)
+                .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelLayout.createSequentialGroup()
+                        .addGap(5, 5, 5)
+                        .addComponent(jLabel5))
+                    .addComponent(forenameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanelLayout.createSequentialGroup()
+                        .addGap(5, 5, 5)
+                        .addComponent(jLabel8))
+                    .addGroup(jPanelLayout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(userTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(11, 11, 11)
+                .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(surnameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanelLayout.createSequentialGroup()
+                        .addGap(5, 5, 5)
+                        .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel15))))
+                .addGap(12, 12, 12)
+                .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelLayout.createSequentialGroup()
+                        .addGap(7, 7, 7)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanelLayout.createSequentialGroup()
+                        .addGap(5, 5, 5)
+                        .addComponent(jLabel7))
+                    .addComponent(dobTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(usernameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(11, 11, 11)
+                .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(add1Txt, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanelLayout.createSequentialGroup()
+                        .addGap(5, 5, 5)
+                        .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel11))))
+                .addGap(12, 12, 12)
+                .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelLayout.createSequentialGroup()
+                        .addGap(5, 5, 5)
+                        .addComponent(jLabel9))
+                    .addComponent(add2Txt, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(password1Txt, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
+                .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(postcodeTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanelLayout.createSequentialGroup()
+                        .addGap(5, 5, 5)
+                        .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel14))))
+                .addGap(12, 12, 12)
+                .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelLayout.createSequentialGroup()
+                        .addGap(5, 5, 5)
+                        .addComponent(jLabel12))
+                    .addComponent(numTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(password2Txt, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
+                .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelLayout.createSequentialGroup()
+                        .addGap(5, 5, 5)
+                        .addComponent(jLabel13))
+                    .addComponent(emailTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(backBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(saveBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -269,7 +323,7 @@ public class editProfileUI extends javax.swing.JFrame {
     }//GEN-LAST:event_backBtnActionPerformed
 
     private void saveBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveBtnActionPerformed
-
+//
 //        String forename = forenameTxt.getText();
 //        String surname = surnameTxt.getText();
 //        String dob = dobTxt.getText();
@@ -278,12 +332,11 @@ public class editProfileUI extends javax.swing.JFrame {
 //        String postcode = postcodeTxt.getText();
 //        String num = numTxt.getText();
 //        String email = emailTxt.getText();
-//    
+//        String userType = (String) userTypeComboBox.getSelectedItem();
 //        String username = usernameTxt.getText();
 //        String password1 = password1Txt.getText();
 //        String income = "0";
-//        String lineRead;
-//        int lineNum = 0;//stores the number of lines in a file
+//       
 //
 //        boolean validate = true;
 //
@@ -312,20 +365,16 @@ public class editProfileUI extends javax.swing.JFrame {
 //            JOptionPane.showMessageDialog(null, "Please write a valid date and in the format 'dd/mm/yyyy'", "DOB",
 //                    JOptionPane.INFORMATION_MESSAGE);
 //        }
-//        if (Validation.isPresent(emailTxt.getText()) == false) {
-//            validate = false;
-//            JOptionPane.showMessageDialog(null, "Cannot be empty!", "Email",
-//                    JOptionPane.INFORMATION_MESSAGE);
-//        }
+//        
 //        if (Validation.isPresent(add1Txt.getText()) == false) {
 //            validate = false;
 //            JOptionPane.showMessageDialog(null, "Cannot be empty!", "address",
-//                    JOptionPane.INFORMATION_MESSAGE);// TODO add your handling code here:
+//                    JOptionPane.INFORMATION_MESSAGE);
 //        }
 //        if (Validation.isPresent(postcodeTxt.getText()) == false) {
 //            validate = false;
 //            JOptionPane.showMessageDialog(null, "Cannot be empty!", "Postcode",
-//                    JOptionPane.INFORMATION_MESSAGE);// TODO add your handling code here:
+//                    JOptionPane.INFORMATION_MESSAGE);
 //        }
 //        if ((Validation.isLength(postcodeTxt.getText(), 7) || Validation.isLength(postcodeTxt.getText(), 8)) == false) {
 //            validate = false;
@@ -348,9 +397,30 @@ public class editProfileUI extends javax.swing.JFrame {
 //                    JOptionPane.INFORMATION_MESSAGE);
 //        }
 //
-//        
+//        try {
+//            if (validate == true) {
+//                //store participant information
+//                if (userType.equalsIgnoreCase("participant")) {
+//                    try {
+//                        ParticipantVO participant = new ParticipantVO();
+//                        participant.username = username;
+//                        participant.password = password1;
+//                        participant.forename = forename;
+//                        participant.surname = surname;
+//                        participant.dob = dob;
+//                        participant.add1 = add1;
+//                        participant.add2 = add2;
+//                        participant.postcode = postcode;
+//                        participant.num = num;
+//                        participant.email = email;
+//                        GoService.getInstance().addParticipant(participant);
+//                    } catch (Exception e) {
+//                        e.printStackTrace();
+//                    }
+//                }
 //                //store organizer information
-//                
+//                if (userType.equalsIgnoreCase("organizer")) {
+//                    
 //                    try {
 //                        OrganizerVO organizer = new OrganizerVO();
 //                        organizer.username = username;
@@ -364,17 +434,20 @@ public class editProfileUI extends javax.swing.JFrame {
 //                        organizer.num = num;
 //                        organizer.email = email;
 //                        organizer.income = income;
-//                        //GoService.getInstance().insertOrganizer(organizer);
+//                        GoService.getInstance().addOrganizer(organizer);
 //                    } catch (Exception e) {
 //
 //                    }
-//                    JOptionPane.showMessageDialog(null, "successful added");
-//                    MainFormUI mainFrm = new MainFormUI();
-//                    mainFrm.setVisible(true);
+//                    
+//                }
+//                JOptionPane.showMessageDialog(null, "successful added");
+//                    LoginUI liFrm = new LoginUI();
+//                    liFrm.setVisible(true);
 //                    this.dispose();
-//                
-//            
-//       
+//            }
+//        } catch (Exception ex) {
+//            JOptionPane.showMessageDialog(null, "error with: " + ex);
+//        }
     }//GEN-LAST:event_saveBtnActionPerformed
 
     /**
@@ -402,134 +475,6 @@ public class editProfileUI extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(editProfileUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -686,15 +631,16 @@ public class editProfileUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField numTxt;
     private javax.swing.JTextField password1Txt;
     private javax.swing.JTextField password2Txt;
     private javax.swing.JTextField postcodeTxt;
     private javax.swing.JButton saveBtn;
     private javax.swing.JTextField surnameTxt;
+    private javax.swing.JComboBox<String> userTypeComboBox;
     private javax.swing.JTextField usernameTxt;
     // End of variables declaration//GEN-END:variables
 }

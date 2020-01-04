@@ -281,14 +281,19 @@ public class MyEventsUI extends javax.swing.JFrame {
     }//GEN-LAST:event_openBtnActionPerformed
 
     private void editBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editBtnActionPerformed
+        try{
         int row = myEventsTable.getSelectedRow();
         EventVO event = (EventVO) eventList.get(row);
+        
         if (!event.eventName.equalsIgnoreCase("You have no events yet")) {
             EventInformationUI eiFrm = new EventInformationUI();
             eiFrm.setEvent(event);
             eiFrm.sourceForm = 2;
             eiFrm.setVisible(true);
             this.dispose();
+        }
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "Please select an event first");
         }
     }//GEN-LAST:event_editBtnActionPerformed
 

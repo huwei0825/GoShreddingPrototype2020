@@ -123,7 +123,7 @@
                   <Table columnCount="3" rowCount="4">
                     <Column editable="false" title="Notification" type="java.lang.Object"/>
                     <Column editable="false" title="Notified date" type="java.lang.Object"/>
-                    <Column editable="false" title="Readed" type="java.lang.Object"/>
+                    <Column editable="false" title="Read" type="java.lang.Object"/>
                   </Table>
                 </Property>
               </Properties>

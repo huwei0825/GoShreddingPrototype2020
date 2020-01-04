@@ -139,7 +139,7 @@ public class SignUpUI extends javax.swing.JFrame {
         });
 
         saveBtn.setBackground(new java.awt.Color(72, 124, 175));
-        saveBtn.setText("Save");
+        saveBtn.setText("Sign up");
         saveBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 saveBtnActionPerformed(evt);

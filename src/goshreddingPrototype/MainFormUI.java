@@ -42,7 +42,7 @@ public class MainFormUI extends javax.swing.JFrame {
         if (GoService.currentUserType == 2) {
             newGroupBtn.setVisible(false);
         } else if (GoService.currentUserType == 1) {
-            
+            notificationBtn.setVisible(false);
             recommandEventLbl.setText("Events by other organizers");
         }
         myProfileLbl.addMouseListener(new MyMouseAdapter(myProfileLbl));
@@ -108,7 +108,6 @@ public class MainFormUI extends javax.swing.JFrame {
                         //oeFrm.event = event;
                         oeFrm.sourceForm = 1;
                         oeFrm.setEvent(event);
-                        oeFrm.setDataType(1);
                         oeFrm.setVisible(true);
                         dispose();
                     }

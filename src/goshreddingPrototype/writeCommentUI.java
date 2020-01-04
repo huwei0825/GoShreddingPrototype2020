@@ -9,12 +9,12 @@ package goshreddingPrototype;
  *
  * @author huwei
  */
-public class writeReviewUI extends javax.swing.JFrame {
+public class writeCommentUI extends javax.swing.JFrame {
 
     /**
      * Creates new form Login
      */
-    public writeReviewUI() {
+    public writeCommentUI() {
         initComponents();
     }
 
@@ -43,7 +43,7 @@ public class writeReviewUI extends javax.swing.JFrame {
         jPanel.setBackground(new java.awt.Color(239, 246, 254));
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
-        jLabel1.setText("Write a review");
+        jLabel1.setText("Write a comment");
 
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
         jLabel2.setText("what you like/dislike about this event:");
@@ -151,14 +151,22 @@ public class writeReviewUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(writeReviewUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(writeCommentUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(writeReviewUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(writeCommentUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(writeReviewUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(writeCommentUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(writeReviewUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(writeCommentUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -171,7 +179,7 @@ public class writeReviewUI extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new writeReviewUI().setVisible(true);
+                new writeCommentUI().setVisible(true);
             }
         });
     }

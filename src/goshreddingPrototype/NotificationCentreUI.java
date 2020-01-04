@@ -56,7 +56,7 @@ public class NotificationCentreUI extends javax.swing.JFrame {
                 {null, null, null}
             },
             new String [] {
-                "Notification", "Notified date", "Readed"
+                "Notification", "Notified date", "Read"
             }
         ) {
             boolean[] canEdit = new boolean [] {
