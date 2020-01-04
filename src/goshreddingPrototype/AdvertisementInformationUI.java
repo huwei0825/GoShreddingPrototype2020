@@ -15,7 +15,7 @@ import javax.swing.border.BevelBorder;
 
 /**
  *
- * @author huwei
+ * @author Songyun Hu
  */
 public class AdvertisementInformationUI extends javax.swing.JFrame {
 

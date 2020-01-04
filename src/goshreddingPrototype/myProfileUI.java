@@ -7,7 +7,7 @@ package goshreddingPrototype;
 
 /**
  *
- * @author huwei
+ * @author Songyun Hu
  */
 public class myProfileUI extends javax.swing.JFrame {
 

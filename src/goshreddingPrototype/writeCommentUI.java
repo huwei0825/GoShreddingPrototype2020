@@ -7,7 +7,7 @@ package goshreddingPrototype;
 
 /**
  *
- * @author huwei
+ * @author Songyun Hu
  */
 public class writeCommentUI extends javax.swing.JFrame {
 

@@ -27,7 +27,7 @@ import javax.swing.table.TableColumnModel;
 
 /**
  *
- * @author huwei
+ * @author Songyun Hu
  */
 public class MainFormUI extends javax.swing.JFrame {
 

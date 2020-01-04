@@ -12,7 +12,7 @@ import javax.swing.table.TableCellRenderer;
 
 /**
  *
- * @author huwei
+ * @author Songyun Hu
  */
 public class RecommandedEventCellRender extends javax.swing.JPanel implements TableCellRenderer{
 

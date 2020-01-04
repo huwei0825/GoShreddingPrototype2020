@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author huwei
+ * @author Songyun Hu
  */
 public class SplashScreenUI extends javax.swing.JFrame {
 

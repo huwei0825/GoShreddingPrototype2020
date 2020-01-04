@@ -7,7 +7,7 @@ package goshredding.data;
 
 /**
  *
- * @author huwei
+ * @author Songyun Hu
  */
 public class Validation {
 

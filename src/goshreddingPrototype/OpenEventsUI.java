@@ -13,7 +13,7 @@ import javax.swing.ImageIcon;
 
 /**
  *
- * @author huwei
+ * @author Songyun Hu
  */
 public class OpenEventsUI extends javax.swing.JFrame {
 

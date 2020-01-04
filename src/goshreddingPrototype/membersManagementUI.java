@@ -7,7 +7,7 @@ package goshreddingPrototype;
 
 /**
  *
- * @author huwei
+ * @author Songyun Hu
  */
 public class membersManagementUI extends javax.swing.JFrame {
 

@@ -9,7 +9,7 @@ import javax.swing.JTable;
 
 /**
  *
- * @author huwei
+ * @author Songyun Hu
  */
 public class Definition {
     public final static String PARTICIPANTFILE = "ParticipantFile.txt";

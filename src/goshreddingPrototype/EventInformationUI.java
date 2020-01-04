@@ -20,7 +20,7 @@ import javax.swing.filechooser.FileFilter;
 
 /**
  *
- * @author huwei
+ * @author Songyun Hu
  */
 public class EventInformationUI extends javax.swing.JFrame {
 

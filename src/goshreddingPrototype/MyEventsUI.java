@@ -17,7 +17,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author huwei
+ * @author Songyun Hu
  */
 public class MyEventsUI extends javax.swing.JFrame {
 

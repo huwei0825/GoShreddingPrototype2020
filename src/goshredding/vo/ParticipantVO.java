@@ -7,7 +7,7 @@ package goshredding.vo;
 
 /**
  *
- * @author huwei
+ * @author Songyun Hu
  */
 public class ParticipantVO {
     public String participantId;
